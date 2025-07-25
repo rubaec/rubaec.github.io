@@ -1,0 +1,287 @@
+.more-height {
+  /* For the contact info*/
+  line-height: 2;
+}
+
+/* Restrict width on desktop devices only */
+@media (min-width: 768px) {
+  .container, 
+  body > .container,
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Mode Toggle within Navbar */
+.mode-toggle-container {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+}
+
+.mode-toggle-label {
+    font-size: 14px;
+    font-weight: 200;
+    color: #333;
+    margin-right: 8px;
+}
+
+/* Hide the default checkbox */
+#mode-toggle {
+    display: none;
+}
+
+/* Custom toggle switch */
+.toggle-switch {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+/* Toggle switch slider */
+.toggle-switch::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* When checked (professional mode) */
+#mode-toggle:checked + .toggle-switch {
+    background-color: #1a237e;
+}
+
+#mode-toggle:checked + .toggle-switch::before {
+    transform: translateX(20px);
+}
+
+/* Hover effect */
+.toggle-switch:hover {
+    box-shadow: 0 0 0 3px rgba(26, 35, 126, 0.1);
+}
+
+/* Mobile responsive */
+@media (max-width: 991px) {
+    .mode-toggle-container {
+        padding: 0.25rem 0.75rem;
+    }
+    
+    .mode-toggle-label {
+        font-size: 12px;
+    }
+    
+    .toggle-switch {
+        width: 40px;
+        height: 22px;
+    }
+    
+    .toggle-switch::before {
+        width: 18px;
+        height: 18px;
+    }
+    
+    #mode-toggle:checked + .toggle-switch::before {
+        transform: translateX(18px);
+    }
+}
+
+.mode-toggle-label i {
+    color: #333;
+}
+
+.professional-mode .mode-toggle-label i {
+    color: #000;
+}
+
+/* Casual Mode Styles */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;300;400;500;600;700;800&display=swap');
+.casual-mode {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+.casual-mode h1 {
+  color: #003366;
+  font-weight: 200;
+}
+
+.casual-mode h2 {
+  color: #003366;
+  font-weight: 200;
+  /* 100 is the thinnest, 400 is normal, and 900 is the boldest */
+}
+
+.casual-mode h3 {
+  color: #003366;
+  font-weight: 200;
+  font-size: 1.4em;
+  /* This makes the size slightly smaller than normal text size */
+}
+
+.casual-mode p {
+    font-weight: 200;
+}
+
+.casual-mode body {
+    font-weight: 200;
+}
+
+.casual-mode a {
+  color: #003366;
+  /* Teal color */
+  text-decoration: underline;
+}
+
+.casual-mode a:hover {
+  color: #0D1142;
+}
+
+/* Remove underlines from navbar links in casual mode */
+.casual-mode .navbar-nav .nav-link {
+    text-decoration: none !important;
+}
+
+.casual-mode .navbar-nav .nav-link:hover {
+    text-decoration: none !important;
+}
+
+/* Remove underlines from navbar brand/logo link in casual mode */
+.casual-mode .navbar-brand {
+    text-decoration: none !important;
+}
+
+.casual-mode .navbar-brand:hover {
+    text-decoration: none !important;
+}
+
+/* Professional Mode Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+.professional-mode {
+    font-family: 'Inter', sans-serif;
+}
+
+.professional-mode h1, 
+.professional-mode h2, 
+.professional-mode h3 {
+    font-weight: 700;
+    color: #000;
+}
+
+.professional-mode p {
+    font-weight: 400;
+    color: #333;
+}
+
+.professional-mode body {
+    font-weight: 400;
+    color: #333;
+}
+
+.professional-mode a {
+    color: #000080;
+}
+
+.professional-mode a:hover {
+    color: #000040;
+}
+
+/* Professional mode navbar link styling */
+.professional-mode .navbar-nav .nav-link {
+    color: #000 !important;
+}
+
+.professional-mode .navbar-nav .nav-link:hover {
+    color: #333 !important;
+}
+
+.professional-mode .navbar-nav .nav-link.active {
+    color: #000 !important;
+}
+
+.professional-mode .navbar-brand {
+    color: #000 !important;
+}
+
+.professional-mode .navbar-brand:hover {
+    color: #333 !important;
+}
+
+.professional-mode .navbar-brand span {
+    color: #000 !important;
+}
+
+/* Content visibility controls */
+.casual-only {
+    display: inline;
+}
+
+.professional-only {
+    display: none;
+}
+
+.professional-mode .casual-only {
+    display: none;
+}
+
+.professional-mode .professional-only {
+    display: inline;
+}
+
+/* Profile image styling */
+.profile-image {
+    transition: all 0.3s ease;
+}
+
+/* Make toggle button responsive */
+@media (max-width: 768px) {
+    #mode-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Read more button */
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #1a237e;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 400;
+}
+
+.read-more-btn:hover {
+  color: #0d1142;
+}
+
+.read-more-icon {
+  transition: transform 0.2s ease;
+}
+
+.research-content p {
+  transition: opacity 0.3s ease;
+}
+
+strong, b {
+  font-weight: 600;
+  /* Use a heavier weight to make it stand out from the light 400 weight */
+}
