@@ -282,6 +282,91 @@
   transition: opacity 0.3s ease;
 }
 
+/* Publications with expandable abstracts - matching existing toggle style */
+
+.publication-item {
+    margin-bottom: 30px;
+}
+
+.publication-title {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+
+.publication-authors {
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.publication-venue {
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.publication-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Abstract toggle button - matching your existing read-more button style */
+.abstract-toggle-btn:hover {
+    background-color: #e9ecef !important;
+    border-color: #adb5bd !important;
+}
+
+.publication-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.publication-links a {
+    color: #495057;
+    text-decoration: none;
+    padding: 0px 0px;
+    transition: all 0.2s ease;
+}
+
+.publication-links a:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.abstract-text {
+    color: #495057;
+    line-height: 1.2;
+    text-align: justify;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .publication-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .publication-links {
+        width: 100%;
+    }
+}
+
+.no-underline-link {
+    text-decoration: none !important;
+    color: #000 !important;
+}
+
+.no-underline-link:hover {
+    text-decoration: underline !important;
+    color: inherit !important;
+}
+
 strong, b {
   font-weight: 600;
   /* Use a heavier weight to make it stand out from the light 400 weight */
