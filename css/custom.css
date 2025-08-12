@@ -313,16 +313,37 @@
     flex-wrap: wrap;
 }
 
+.publication-extend {
+    margin-top: 20px
+}
+
+.abstract-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+    margin-left: 1px;
+    padding: 0px 0px;
+    border: none;
+    background: none;
+    color: #495057;
+    cursor: pointer;
+}
+
 /* Abstract toggle button - matching your existing read-more button style */
 .abstract-toggle-btn:hover {
     background-color: #e9ecef !important;
     border-color: #adb5bd !important;
 }
 
+.abstract-btn-icon {
+    font-size: 0.8em;
+}
+
 .publication-links {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+    font-size: 0.9rem;
 }
 
 .publication-links a {
