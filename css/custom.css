@@ -342,7 +342,7 @@
 
 .publication-links {
     display: flex;
-    gap: 15px;
+    gap: 18px;
     flex-wrap: wrap;
     font-size: 0.9rem;
 }
